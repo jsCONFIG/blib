@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blib</title>
+    <style>
+        html, *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 100%;
+            min-width: 1000px;
+        }
+
+        /*from bootstrap*/
+        code{
+            display: block;
+            padding: 2px 4px;
+            font-size: 90%;
+            color: #c7254e;
+            background-color: #f9f2f4;
+            white-space: nowrap;
+            border-radius: 4px;
+            font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+        }
+        .code-result{
+            margin: 10px 40px;
+            padding: 10px;
+            border: 1px solid #cfcfcf;
+            border-radius: 2px;
+        }
+        .list-item{
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            list-style-type: disc;
+            font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+
+            border-left: 3px solid #cfcfcf;
+            margin: 10px;
+        }
+        .list-item .list-item-head{
+            margin: 10px 0px;
+            border-bottom: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <ul class="list-lib">
+                <li class="list-item">
+                    <div class="list-item-head">time/date</div>
+                    <div class="list-item-body">
+                        <code>
+                            var date = require( 'time/date' );<br>
+                            console.log( date('Y-m-d') );<br>
+                        </code>
+                        <div class="code-result" id="time_date">
+                            
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="require.js" data-main="main.js"></script>
+</body>
+</html>
