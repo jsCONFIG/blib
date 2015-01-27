@@ -1,4 +1,4 @@
 blib
 ====
 
-js基础库(Javascript lib.)
+js基础工具集(Basic toolset for Javascript.)
