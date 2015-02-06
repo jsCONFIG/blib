@@ -76,6 +76,30 @@
                         </div>
                     </div>
                 </li>
+                <li class="list-item">
+                    <div class="list-item-head">data/database</div>
+                    <div class="list-item-body">
+                        <code>
+                            var database = require( 'data/database' );<br>
+                            var myData = new database({'primary' : 'id', 'idx' : ['name', 'age']});<br>
+                            myData.create({ 'id' : 1, 'name' : 'BottleLiu1', 'age' : 24 });<br>
+                            myData.create({ 'id' : 2, 'name' : 'BottleLiu2', 'age' : 24, 'from' : 'China' });<br><br>
+                            console.log( myData.get( { 'name' : 'BottleLiu1' } ) );<br>
+                            console.log( myData.get( { 'id' : '1' } ) );<br>
+                            console.log( myData.get( { 'age' : 24 } ) );<br>
+                            console.log( myData.get( { 'age' : 24, 'from' : 'China' } ) );<br><br>
+
+                            myData.update( { 'age' : 24 }, { 'name' : 'bottle' } );<br>
+                            console.log( myData.get( { 'age' : 24 } ) );<br><br>
+
+                            myData.del( { 'id' : 1} );<br>
+                            console.log( myData.get( { 'age' : 24 } ) );<br>
+                        </code>
+                        <div class="code-result" id="data_database">
+                            
+                        </div>
+                    </div>
+                </li>
             </ul>
 
         </div>
