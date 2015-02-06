@@ -10,7 +10,7 @@ js基础工具集(Basic toolset for Javascript.)
   2). data/xx-与数据相关的处理
 
 ###详情列表
-  > 示例中的变量已放在全局的vars变量中，可在控制台中进行相关操作
+  > 示例中的变量已放在全局的vars变量中，可在控制台中进行相关操作，所有示例都可已在仓库中的blib.html中实现，可自行摘取自己需要的工具
 
   time/date-类似php中的date方法
 
@@ -24,8 +24,12 @@ js基础工具集(Basic toolset for Javascript.)
 		'. Tomorrow is ' + timeDate( 'Y-m-d', timeCalc( '+1day' ) ) );
 
   data/database-数据管理，支持主键，索引创建，以及常规的增删改查
+  > 注：索引适用于大量数据且改动不频繁的情况，少量数据则无需适用索引
+
 
     var dataDatabase = require( 'data/database' );
+	
+	// 创建主键及索引列表，主键可不填<代码自动生成>
 	var myData = new dataDatabase({'primary' : 'id', 'idx' : ['name', 'age']});
 	
 	// 增
