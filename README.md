@@ -24,7 +24,7 @@ js基础工具集(Basic toolset for Javascript.)
 		'. Tomorrow is ' + timeDate( 'Y-m-d', timeCalc( '+1day' ) ) );
 
   data/database-数据管理，支持主键，索引创建，以及常规的增删改查
-  > 注：索引适用于大量数据且改动不频繁的情况，少量数据则无需适用索引
+  > 注：索引适用于大量数据且改动不频繁的情况，少量数据则无需使用索引
 
 
     var dataDatabase = require( 'data/database' );
