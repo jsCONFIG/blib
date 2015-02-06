@@ -16,5 +16,28 @@ js基础工具集(Basic toolset for Javascript.)
 
   time/calc-时间的简单运算，支持year, month, week, day, hours, minutes, seconds
 
-    var date = require( 'time/calc' );
+    var timeCalc = require( 'time/calc' );
     console.log( 'Today is ' + timeDate( 'Y-m-d' ) + '. Tomorrow is ' + timeDate( 'Y-m-d', timeCalc( '+1day' ) ) );
+
+  data/database-数据管理，支持主键，索引创建，以及常规的增删改查
+
+    var dataDatabase = require( 'data/database' );
+	var myData = new dataDatabase({'primary' : 'id', 'idx' : ['name', 'age']});
+	
+	// 增
+	myData.create({ 'id' : 1, 'name' : 'BottleLiu1', 'age' : 24 });
+	myData.create({ 'id' : 2, 'name' : 'BottleLiu2', 'age' : 24, 'from' : 'China' });
+	
+	// 查
+	console.log( myData.get( { 'name' : 'BottleLiu1' } ) );
+	console.log( myData.get( { 'id' : '1' } ) );
+	console.log( myData.get( { 'age' : 24 } ) );
+	console.log( myData.get( { 'age' : 24, 'from' : 'China' } ) );
+	
+	// 改
+	myData.update( { 'age' : 24 }, { 'name' : 'bottle' } );
+	console.log( myData.get( { 'age' : 24 } ) );
+	
+	// 删
+	myData.del( { 'id' : 1} );
+	console.log( myData.get( { 'age' : 24 } ) );
