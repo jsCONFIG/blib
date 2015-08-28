@@ -1,0 +1,52 @@
+.bcalendar-wrapper{
+    @width: 40px;
+    @height: 40px;
+    
+    width: @width * 7;
+
+    .fixclear() {
+        &:after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+    }
+    .bcalendar-header{
+        .fixclear;
+    }
+    .bcal-btn {
+        cursor: pointer;
+    }
+    .bcal-btn,.bcal-pannel{
+        float: left;
+        width: 20%;
+        min-height: 10px;
+    }
+    .bcal-align-left{
+        text-align: left;
+    }
+    .bcal-align-right{
+        text-align: right;
+    }
+
+    .bcal-item {
+        float: left;
+        width: @width;
+        height: @height;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+
+        &.prev,&.next{
+            color: #999;
+        }
+    }
+
+    .bcalendar-week{
+        .fixclear;
+    }
+
+    .bcalendar-day {
+        .fixclear;
+    }
+}

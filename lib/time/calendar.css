@@ -1,0 +1,45 @@
+.bcalendar-wrapper {
+  width: 280px;
+}
+.bcalendar-wrapper .bcalendar-header:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.bcalendar-wrapper .bcal-btn {
+  cursor: pointer;
+}
+.bcalendar-wrapper .bcal-btn,
+.bcalendar-wrapper .bcal-pannel {
+  float: left;
+  width: 20%;
+  min-height: 10px;
+}
+.bcalendar-wrapper .bcal-align-left {
+  text-align: left;
+}
+.bcalendar-wrapper .bcal-align-right {
+  text-align: right;
+}
+.bcalendar-wrapper .bcal-item {
+  float: left;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+.bcalendar-wrapper .bcal-item.prev,
+.bcalendar-wrapper .bcal-item.next {
+  color: #999;
+}
+.bcalendar-wrapper .bcalendar-week:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.bcalendar-wrapper .bcalendar-day:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
